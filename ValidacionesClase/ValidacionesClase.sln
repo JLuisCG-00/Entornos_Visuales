@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ValidacionesClase", "ValidacionesClase\ValidacionesClase.vbproj", "{2C72A353-76BA-45AA-B08D-A7BD0E4A59DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C72A353-76BA-45AA-B08D-A7BD0E4A59DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C72A353-76BA-45AA-B08D-A7BD0E4A59DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C72A353-76BA-45AA-B08D-A7BD0E4A59DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C72A353-76BA-45AA-B08D-A7BD0E4A59DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {944D5D49-895F-47C4-9DDB-B9AEA78181EC}
+	EndGlobalSection
+EndGlobal
