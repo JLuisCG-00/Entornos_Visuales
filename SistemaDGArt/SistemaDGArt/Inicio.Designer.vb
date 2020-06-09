@@ -49,7 +49,7 @@ Partial Class Inicio
         Me.LblBienvenida.AutoSize = True
         Me.LblBienvenida.BackColor = System.Drawing.Color.Transparent
         Me.LblBienvenida.Font = New System.Drawing.Font("Mini Moment", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBienvenida.Location = New System.Drawing.Point(250, 24)
+        Me.LblBienvenida.Location = New System.Drawing.Point(250, 49)
         Me.LblBienvenida.Name = "LblBienvenida"
         Me.LblBienvenida.Size = New System.Drawing.Size(305, 43)
         Me.LblBienvenida.TabIndex = 0

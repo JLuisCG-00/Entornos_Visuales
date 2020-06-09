@@ -25,6 +25,7 @@ Partial Class Ingreso
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ingreso))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CambiarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnSalir = New System.Windows.Forms.Button()
@@ -32,7 +33,6 @@ Partial Class Ingreso
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtUActivo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CambiarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TxtTipo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,11 +44,11 @@ Partial Class Ingreso
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.CbmDesc = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.CbmImp = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.CbmDesc = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TxtTotal = New System.Windows.Forms.TextBox()
         Me.TxtImp = New System.Windows.Forms.TextBox()
         Me.TxtDesc = New System.Windows.Forms.TextBox()
@@ -77,6 +77,12 @@ Partial Class Ingreso
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.InicioToolStripMenuItem.Text = "Cambiar usuario"
+        '
+        'CambiarUsuarioToolStripMenuItem
+        '
+        Me.CambiarUsuarioToolStripMenuItem.Name = "CambiarUsuarioToolStripMenuItem"
+        Me.CambiarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.CambiarUsuarioToolStripMenuItem.Text = "Cambiar Usuario"
         '
         'AgregarProductosToolStripMenuItem
         '
@@ -150,15 +156,9 @@ Partial Class Ingreso
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Usuario activo:"
         '
-        'CambiarUsuarioToolStripMenuItem
-        '
-        Me.CambiarUsuarioToolStripMenuItem.Name = "CambiarUsuarioToolStripMenuItem"
-        Me.CambiarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(32, 19)
-        Me.CambiarUsuarioToolStripMenuItem.Text = "Cambiar Usuario"
-        '
         'TxtTipo
         '
-        Me.TxtTipo.Location = New System.Drawing.Point(148, 83)
+        Me.TxtTipo.Location = New System.Drawing.Point(173, 106)
         Me.TxtTipo.Name = "TxtTipo"
         Me.TxtTipo.Size = New System.Drawing.Size(190, 26)
         Me.TxtTipo.TabIndex = 17
@@ -168,7 +168,7 @@ Partial Class Ingreso
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 85)
+        Me.Label1.Location = New System.Drawing.Point(31, 108)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(136, 18)
         Me.Label1.TabIndex = 18
@@ -179,7 +179,7 @@ Partial Class Ingreso
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 129)
+        Me.Label2.Location = New System.Drawing.Point(110, 152)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 18)
         Me.Label2.TabIndex = 20
@@ -187,7 +187,7 @@ Partial Class Ingreso
         '
         'TxtPrecio
         '
-        Me.TxtPrecio.Location = New System.Drawing.Point(148, 127)
+        Me.TxtPrecio.Location = New System.Drawing.Point(173, 150)
         Me.TxtPrecio.Name = "TxtPrecio"
         Me.TxtPrecio.Size = New System.Drawing.Size(104, 26)
         Me.TxtPrecio.TabIndex = 21
@@ -197,7 +197,7 @@ Partial Class Ingreso
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(49, 43)
+        Me.Label6.Location = New System.Drawing.Point(74, 66)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 18)
         Me.Label6.TabIndex = 24
@@ -205,7 +205,7 @@ Partial Class Ingreso
         '
         'TxtId
         '
-        Me.TxtId.Location = New System.Drawing.Point(148, 44)
+        Me.TxtId.Location = New System.Drawing.Point(173, 67)
         Me.TxtId.Name = "TxtId"
         Me.TxtId.Size = New System.Drawing.Size(104, 26)
         Me.TxtId.TabIndex = 25
@@ -215,11 +215,11 @@ Partial Class Ingreso
         Me.BtnAgregar.BackColor = System.Drawing.Color.Lime
         Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.Location = New System.Drawing.Point(33, 354)
+        Me.BtnAgregar.Location = New System.Drawing.Point(27, 376)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(81, 31)
+        Me.BtnAgregar.Size = New System.Drawing.Size(140, 31)
         Me.BtnAgregar.TabIndex = 26
-        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.Text = "Agregar a factura"
         Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'BtnCancelar
@@ -227,7 +227,7 @@ Partial Class Ingreso
         Me.BtnCancelar.BackColor = System.Drawing.Color.Yellow
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.Location = New System.Drawing.Point(199, 354)
+        Me.BtnCancelar.Location = New System.Drawing.Point(226, 376)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(150, 31)
         Me.BtnCancelar.TabIndex = 27
@@ -239,7 +239,7 @@ Partial Class Ingreso
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(68, 168)
+        Me.Label7.Location = New System.Drawing.Point(93, 191)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 18)
         Me.Label7.TabIndex = 28
@@ -247,7 +247,7 @@ Partial Class Ingreso
         '
         'TxtCantidad
         '
-        Me.TxtCantidad.Location = New System.Drawing.Point(148, 166)
+        Me.TxtCantidad.Location = New System.Drawing.Point(173, 189)
         Me.TxtCantidad.Name = "TxtCantidad"
         Me.TxtCantidad.Size = New System.Drawing.Size(104, 26)
         Me.TxtCantidad.TabIndex = 29
@@ -277,6 +277,44 @@ Partial Class Ingreso
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de producto"
         '
+        'CbmImp
+        '
+        Me.CbmImp.FormattingEnabled = True
+        Me.CbmImp.Location = New System.Drawing.Point(173, 283)
+        Me.CbmImp.Name = "CbmImp"
+        Me.CbmImp.Size = New System.Drawing.Size(121, 28)
+        Me.CbmImp.TabIndex = 38
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(78, 287)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(77, 18)
+        Me.Label13.TabIndex = 37
+        Me.Label13.Text = "Impuesto"
+        '
+        'CbmDesc
+        '
+        Me.CbmDesc.FormattingEnabled = True
+        Me.CbmDesc.Location = New System.Drawing.Point(173, 233)
+        Me.CbmDesc.Name = "CbmDesc"
+        Me.CbmDesc.Size = New System.Drawing.Size(121, 28)
+        Me.CbmDesc.TabIndex = 36
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(78, 239)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 18)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Descuento"
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
@@ -296,48 +334,10 @@ Partial Class Ingreso
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalle Factura"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 216)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 18)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Descuento"
-        '
-        'CbmDesc
-        '
-        Me.CbmDesc.FormattingEnabled = True
-        Me.CbmDesc.Location = New System.Drawing.Point(148, 210)
-        Me.CbmDesc.Name = "CbmDesc"
-        Me.CbmDesc.Size = New System.Drawing.Size(121, 28)
-        Me.CbmDesc.TabIndex = 36
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(53, 264)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(77, 18)
-        Me.Label13.TabIndex = 37
-        Me.Label13.Text = "Impuesto"
-        '
-        'CbmImp
-        '
-        Me.CbmImp.FormattingEnabled = True
-        Me.CbmImp.Location = New System.Drawing.Point(148, 260)
-        Me.CbmImp.Name = "CbmImp"
-        Me.CbmImp.Size = New System.Drawing.Size(121, 28)
-        Me.CbmImp.TabIndex = 38
-        '
         'TxtTotal
         '
         Me.TxtTotal.Enabled = False
-        Me.TxtTotal.Location = New System.Drawing.Point(181, 265)
+        Me.TxtTotal.Location = New System.Drawing.Point(171, 271)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.Size = New System.Drawing.Size(100, 26)
         Me.TxtTotal.TabIndex = 15
@@ -345,7 +345,7 @@ Partial Class Ingreso
         'TxtImp
         '
         Me.TxtImp.Enabled = False
-        Me.TxtImp.Location = New System.Drawing.Point(181, 209)
+        Me.TxtImp.Location = New System.Drawing.Point(171, 215)
         Me.TxtImp.Name = "TxtImp"
         Me.TxtImp.Size = New System.Drawing.Size(100, 26)
         Me.TxtImp.TabIndex = 14
@@ -353,7 +353,7 @@ Partial Class Ingreso
         'TxtDesc
         '
         Me.TxtDesc.Enabled = False
-        Me.TxtDesc.Location = New System.Drawing.Point(181, 152)
+        Me.TxtDesc.Location = New System.Drawing.Point(171, 158)
         Me.TxtDesc.Name = "TxtDesc"
         Me.TxtDesc.Size = New System.Drawing.Size(100, 26)
         Me.TxtDesc.TabIndex = 13
@@ -361,7 +361,7 @@ Partial Class Ingreso
         'TxtSubtotal
         '
         Me.TxtSubtotal.Enabled = False
-        Me.TxtSubtotal.Location = New System.Drawing.Point(181, 94)
+        Me.TxtSubtotal.Location = New System.Drawing.Point(171, 100)
         Me.TxtSubtotal.Name = "TxtSubtotal"
         Me.TxtSubtotal.Size = New System.Drawing.Size(100, 26)
         Me.TxtSubtotal.TabIndex = 12
@@ -369,36 +369,40 @@ Partial Class Ingreso
         'LblTotal
         '
         Me.LblTotal.AutoSize = True
-        Me.LblTotal.Location = New System.Drawing.Point(110, 272)
+        Me.LblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.Location = New System.Drawing.Point(100, 278)
         Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(44, 20)
+        Me.LblTotal.Size = New System.Drawing.Size(49, 20)
         Me.LblTotal.TabIndex = 11
         Me.LblTotal.Text = "Total"
         '
         'LblIVA
         '
         Me.LblIVA.AutoSize = True
-        Me.LblIVA.Location = New System.Drawing.Point(88, 212)
+        Me.LblIVA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIVA.Location = New System.Drawing.Point(78, 218)
         Me.LblIVA.Name = "LblIVA"
-        Me.LblIVA.Size = New System.Drawing.Size(76, 20)
+        Me.LblIVA.Size = New System.Drawing.Size(84, 20)
         Me.LblIVA.TabIndex = 10
         Me.LblIVA.Text = "Impuesto"
         '
         'LblDesc
         '
         Me.LblDesc.AutoSize = True
-        Me.LblDesc.Location = New System.Drawing.Point(83, 155)
+        Me.LblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDesc.Location = New System.Drawing.Point(73, 161)
         Me.LblDesc.Name = "LblDesc"
-        Me.LblDesc.Size = New System.Drawing.Size(87, 20)
+        Me.LblDesc.Size = New System.Drawing.Size(96, 20)
         Me.LblDesc.TabIndex = 9
         Me.LblDesc.Text = "Descuento"
         '
         'LblSubT
         '
         Me.LblSubT.AutoSize = True
-        Me.LblSubT.Location = New System.Drawing.Point(97, 97)
+        Me.LblSubT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubT.Location = New System.Drawing.Point(87, 103)
         Me.LblSubT.Name = "LblSubT"
-        Me.LblSubT.Size = New System.Drawing.Size(69, 20)
+        Me.LblSubT.Size = New System.Drawing.Size(77, 20)
         Me.LblSubT.TabIndex = 8
         Me.LblSubT.Text = "Subtotal"
         '

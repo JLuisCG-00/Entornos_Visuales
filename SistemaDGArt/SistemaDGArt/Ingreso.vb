@@ -111,4 +111,27 @@
         CbmImp.SelectedIndex = 2
         CbmDesc.SelectedIndex = 6
     End Sub
+
+    Private Sub TxtId_TextChanged(sender As Object, e As EventArgs) Handles TxtId.TextChanged
+        If Not IsNumeric(TxtId.Text) Then
+            MessageBox.Show("El id de producto debe ser solo numeros", "Error en ingreso de id", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtId.Text = "0"
+        End If
+    End Sub
+
+    Private Sub TxtPrecio_TextChanged(sender As Object, e As EventArgs) Handles TxtPrecio.TextChanged
+        If Not IsNumeric(TxtId.Text) Then
+            MessageBox.Show("El id de producto debe ser solo numeros", "Error en ingreso de id", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtPrecio.Text = "0"
+        End If
+    End Sub
+
+    Private Sub TxtCantidad_TextChanged(sender As Object, e As EventArgs) Handles TxtCantidad.TextChanged
+        If Not IsNumeric(TxtId.Text) Then
+            MessageBox.Show("El id de producto debe ser solo numeros", "Error en ingreso de id", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtCantidad.Text = "0"
+        End If
+    End Sub
+
+
 End Class
